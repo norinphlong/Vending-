@@ -1,0 +1,85 @@
+package vending;
+
+import java.util.Scanner;
+public class VendingCode{
+    
+    public static void main(String[] args){
+         System.out.println("Hello, please insert cash");
+         
+        
+         System.out.println("Insert dollars");
+         double Ds = scan.nextDouble();
+         totalAmount = Ds * 1.00;
+         
+         System.out.println("Insert Quarters");
+         double Qts = scan.nextDouble();
+         totalAmount = totalAmount + (Qts * 0.25);
+         
+         System.out.println("Insert Dimes ");
+         double DMs = scan.nextDouble();
+         totalAmount = totalAmount + (DMs * 0.10);
+         
+         System.out.println("Spending = $" + totalAmount);
+         
+         BuyMenu();
+            
+         }
+    
+       
+        public static double totalAmount;
+        public static double change;
+        
+        public static int itemDorito = 4;
+        public static int itemCo = 4;
+        public static int itemChoc = 4;
+        public static String item = null;
+        public static final Scanner scan = new Scanner(System.in);
+        
+        public static void BuyMenu(){
+            
+             System.out.println("Our items: "); 
+             System.out.println("a1 - Doritos -$1.75");
+             System.out.println("b2 - Cookies - $1.00 ");
+             System.out.println("c3 - Choclate - $1.25");
+             
+             
+             
+             String input = scan.next().toLowerCase(); 
+             change = 0;
+             if(input.equals("a1")){
+            	 itemDorito = itemDorito -1;
+                change = totalAmount - 1.75;
+                item ="Doritos";
+                    if(itemDorito == 0){
+                     System.out.println("Would you look at that, apologies, we are out of Doritos:(");
+                    }else{
+                        System.out.println("Here is your "+ item + "\n");       
+                         System.out.println("change dispensed $" + change);
+                    }
+
+             }else if ( input.equals("b2")){
+            	 itemCo = itemCo -1;
+                change = totalAmount - 1.00;
+                item ="Cookies";
+                     if(itemCo == 0){
+                     System.out.println("Would you look at that, apologies, we are out of Cookies:(");
+                    }else{
+                        System.out.println("Here is your "+ item + "\n");       
+                         System.out.println("change dispensed $" + change);
+                    }
+             }else if ( input.equals("c3")){
+            	 itemChoc = itemChoc -1;
+                change = totalAmount - 1.25;
+                item ="Chocolate";
+                     if(itemChoc == 0){
+                     System.out.println("Would you look at that, apologies, we are out of Choclate:(");
+                    }else{
+                        System.out.println("Here is youryour "+ item + "\n");       
+                         System.out.println("change dispensed $" + change);
+                    }
+             }else{
+                   System.out.println("Our system only accepts a1,b2 or c3");
+             }
+             
+            }
+    }
