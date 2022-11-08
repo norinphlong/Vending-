@@ -21,7 +21,7 @@ public class VendingCode{
          
          System.out.println("Spending = $" + totalAmount);
          
-         BuyMenu();
+         BuyOpt();
             
          }
     
@@ -35,7 +35,7 @@ public class VendingCode{
         public static String item = null;
         public static final Scanner scan = new Scanner(System.in);
         
-        public static void BuyMenu(){
+        public static void BuyOpt(){
             
              System.out.println("Our items: "); 
              System.out.println("a1 - Doritos -$1.75");
