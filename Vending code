@@ -74,7 +74,7 @@ public class VendingCode{
                      if(itemChoc == 0){
                      System.out.println("Would you look at that, apologies, we are out of Choclate:(");
                     }else{
-                        System.out.println("Here is youryour "+ item + "\n");       
+                        System.out.println("Here is your "+ item + "\n");       
                          System.out.println("change dispensed $" + change);
                     }
              }else{
